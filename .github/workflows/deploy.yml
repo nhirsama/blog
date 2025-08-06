@@ -9,6 +9,11 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write # 允许写入仓库内容，这是 peaceiris/actions-gh-pages 所需的
+      pages: write    # 允许写入 GitHub Pages
+      id-token: write
+
     steps:
       - name: Checkout Source Branch
         uses: actions/checkout@v4
@@ -35,4 +40,4 @@ jobs:
           user_email: 'github-actions[bot]@users.noreply.github.com' # 自定义部署提交的作者邮箱
           commit_message: 'Deploy Hexo Blog from source branch [skip ci]' # 自定义部署提交信息。
                                                                           # [skip ci] 标签可以防止在部署分支上意外触发其他 CI/CD 工作流。
-          clean: true #在部署前清空目标分支。
+          force_orphan: true #在部署前清空目标分支。
