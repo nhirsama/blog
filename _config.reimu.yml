@@ -106,8 +106,8 @@ footer:
 sidebar: left
 
 social:
-  # email: mailto:xxx@gmail.com
-  # github: https://github.com/yourname
+  email: mailto:nhirsama@outlook.com
+  github: https://github.com/nhirsama
   # google: https://plus.google.com/yourname
   # twitter: https://twitter.com/yourname
   # facebook: https://www.facebook.com/yourname
@@ -521,7 +521,7 @@ sponsor:
 
 # ICP 备案
 icp:
-  icpnumber: # ICP备案号
+  icpnumber: # 冀ICP备2025119570号
   beian: # 网安备案号
   recordcode: # 网安备案链接中的recordcode参数
 
