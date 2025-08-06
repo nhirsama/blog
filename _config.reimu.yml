@@ -93,10 +93,10 @@ copyright: # Inject code snippet right in the footer copyright
 #   All website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></div>
 
 footer:
-  since: 2020 # 2020-current year
-  powered: true
-  count: true # show word count and reading time
-  busuanzi: true
+  since: 2025 # 2020-current year
+  powered: false
+  count: false # show word count and reading time
+  busuanzi: ture
   icon:
     url: "../images/taichi.png" # this path is relative to the css/style.css, so it needs to go up one level to reach the images folder
     rotate: true
@@ -192,7 +192,7 @@ font:
   code:
     # - Ubuntu Mono
     # - Source Code Pro
-    # - JetBrains Mono
+    - JetBrains Mono
 
 # Local FallBack Font
 local_font:
@@ -270,7 +270,7 @@ code_block:
 ########################################
 
 baidu_analytics: false
-google_analytics: false
+google_analytics: G-E3VY0DS22N
 clarity: false
 
 ########################################
@@ -521,7 +521,7 @@ sponsor:
 
 # ICP 备案
 icp:
-  icpnumber: # 冀ICP备2025119570号
+  icpnumber: 冀ICP备2025119570号 # ICP备案号
   beian: # 网安备案号
   recordcode: # 网安备案链接中的recordcode参数
 
