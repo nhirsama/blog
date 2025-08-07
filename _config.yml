@@ -126,3 +126,6 @@ markdown_it_plus:
   typographer:
   quotes: “”‘’
   rawLaTeX: false # newly added
+
+  markdown_it_plus:
+    rawLaTeX: true
