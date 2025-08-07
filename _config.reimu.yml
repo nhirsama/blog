@@ -96,7 +96,7 @@ footer:
   since: 2025 # 2020-current year
   powered: false
   count: false # show word count and reading time
-  busuanzi: ture
+  busuanzi: true
   icon:
     url: "../images/taichi.png" # this path is relative to the css/style.css, so it needs to go up one level to reach the images folder
     rotate: true
@@ -527,14 +527,14 @@ icp:
 
 # show the copyright below each article
 article_copyright:
-  enable: false
+  enable: true
   content:
     author: true
     link: true
     title: false
-    date: false
+    date: true
     updated: false
-    license: true
+    license: false
     license_type: by-nc-sa # https://creativecommons.org/licenses
 
 # Back To Top
