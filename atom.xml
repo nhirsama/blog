@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>nhirのblog</title>
+  <icon>https://blog.nhirsama.cn/icon.png</icon>
+  
+  <link href="https://blog.nhirsama.cn/atom.xml" rel="self"/>
+  
+  <link href="https://blog.nhirsama.cn/"/>
+  <updated>2025-08-07T16:39:35.012Z</updated>
+  <id>https://blog.nhirsama.cn/</id>
+  
+  <author>
+    <name>nhir</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客部署文档</title>
+    <link href="https://blog.nhirsama.cn/2025/08/07/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/"/>
+    <id>https://blog.nhirsama.cn/2025/08/07/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/</id>
+    <published>2025-08-07T23:24:28.000Z</published>
+    <updated>2025-08-07T16:39:35.012Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本文将粗略地介绍一下博客搭建的大致流程及常见命令，不建议作为参考文档。&lt;/p&gt;
+&lt;h2 id=&quot;必要配置&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#必要配置&quot;&gt;&lt;/a&gt; 必要配置&lt;/h2&gt;
+&lt;p&gt;请参阅 &lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://blog.nhirsama.cn/2025/08/06/test/"/>
+    <id>https://blog.nhirsama.cn/2025/08/06/test/</id>
+    <published>2025-08-06T15:06:54.000Z</published>
+    <updated>2025-08-07T16:39:35.012Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;测试&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#测试&quot;&gt;&lt;/a&gt; 测试&lt;/h2&gt;
+&lt;p&gt;测试GitHub workflow</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://blog.nhirsama.cn/2013/12/24/hello-world/"/>
+    <id>https://blog.nhirsama.cn/2013/12/24/hello-world/</id>
+    <published>2013-12-24T17:49:32.000Z</published>
+    <updated>2025-08-07T16:39:35.012Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;http://zespia.tw/hexo&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
