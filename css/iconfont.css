@@ -133,11 +133,11 @@
 .icon-email:before {
   content: "\e63c";
 }
-.sidebar-btn-wrapper .sidebar-toc-btn:before {
+.sidebar-toc-btn:before {
   font-family: "iconfont";
   content: "\e633";
 }
-.sidebar-btn-wrapper .sidebar-common-btn:before {
+.sidebar-common-btn:before {
   font-family: "iconfont";
   content: "\e632";
 }
