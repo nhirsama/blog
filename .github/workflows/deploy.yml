@@ -30,8 +30,9 @@ jobs:
       - name: Generate Hexo Static Files # 生成 Hexo 静态文件
         run: npx hexo generate
 
-      - name: Add CNAME file
-        run: echo 'blog.nhirsama.cn' > ./public/CNAME
+      # - name: Add CNAME file
+      #   run: echo 'blog.nhirsama.cn' > ./public/CNAME
+      # 用于github pages的CNAME信息
 
       - name: Deploy to GitHub Pages # 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
@@ -39,8 +40,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public # Hexo 默认的静态文件输出目录
           publish_branch: gh-pages # 将生成的静态文件部署到 'main' 分支
-          user_name: 'github-actions[bot]' # 自定义部署提交的作者名称
-          user_email: 'github-actions[bot]@users.noreply.github.com' # 自定义部署提交的作者邮箱
+          user_name: 'nhirsama' # 自定义部署提交的作者名称
+          user_email: 'nhirsama@outlook.com' # 自定义部署提交的作者邮箱
           commit_message: 'Deploy: ${{ github.event.head_commit.message }}' # 将workflow的提交信息与main分支的提交分支同步
           # [skip ci] 标签可以防止在部署分支上意外触发其他 CI/CD 工作流。
           # 清空分支会导致 CNAME 配置文件丢失。
