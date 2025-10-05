@@ -23,29 +23,29 @@ sponsor:
 - 当通信双方互相拥有对方公钥之后，可以使用对方的公钥加密信息，并使用自己的私钥签名，实现端对端加密。
 
 ### 应该如何使用？
->1. 从附录中获取我的私钥并导入
+>1. 从[附录](https://blog.nhir.top/2025/10/05/GPG%E5%85%AC%E9%92%A5/#%E9%99%84%E5%BD%95)中获取我的私钥并导入
 > ```bash 
 > gpg --import public.asc
 > ```
 > 其中 public.asc 是一个二进制文本文件，里面写有我的完整公钥。或者使用公钥服务器导入
-> ```base
+> ```bash
 > gpg --keyserver hkps://keys.openpgp.org --search-keys nhirsama@outlook.com
 > ```
-> 2. 验证公钥指纹
-> ```base
+> 2. 验证公钥[指纹](https://blog.nhir.top/2025/10/05/GPG%E5%85%AC%E9%92%A5/#%E6%8C%87%E7%BA%B9)
+> ```bash
 > gpg --fingerprint nhirsama@outlook.com
 > ```
 > 请务必对照导入的公钥指纹与附录中提供的指纹是否一致，以确保公钥未经篡改。
 > 3. 加密信息
-> ```base
+> ```bash
 > echo "需要加密的信息" | gpg --encrypt --armor --recipient nhirsama@outlook.com
 > ```
 > 或直接加密文件
-> ```base
+> ```bash
 > gpg --encrypt --recipient nhirsama@outlook.com secret.txt
 > ```
 > 4. 验证签名
-> ```base
+> ```bash
 > gpg --verify file.sig file.txt
 > ```
 ### 我为何要这么做
@@ -56,7 +56,7 @@ sponsor:
 因此我们需要显式加密与解密信息，以此来保护我们的隐私安全。
 ## 附录
 ### 公钥
-```
+```asc
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mDMEaOCwHRYJKwYBBAHaRw8BAQdAMnQTvzoYCyJ4fXNO2hibYkN5oP5pcYbteqvR
@@ -73,7 +73,7 @@ jskNsjmCN4+79AaVFHf72BWVh8fbpBkO
 ```
 
 ### 指纹
-```
+```fingerprint
 pub   ed25519 2025-10-04 [SC]
       4A98 4E32 30CA CE17 3516  C733 41A6 A096 8A38 CECC
 uid             [ 绝对 ] ling <nhirsama@outlook.com>
