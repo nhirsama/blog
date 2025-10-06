@@ -26,7 +26,7 @@
 
   
 
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)","pt-BR":"Copiado com sucesso (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ","pt-BR":"Falha ao copiar (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://blog.nhir.top';</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://blog.nhir.top';</script>
   
   <title>
     友情链接 |
@@ -47,16 +47,16 @@
 
   
   
-    <meta name="description" content="本站信息  申请方法  添加本站后，在本页留言，格式如下  123456&#96;&#96;&#96;yml- name: #您的名字  url: #您的网址  desc: #简短描述  image: #一张图片&#96;&#96;&#96;  小伙伴们                                                                D-Sketon">
+    <meta name="description" content="本站信息  申请方法  添加本站后，在本页留言，格式如下  123456&#96;&#96;&#96;yml- name: #您的名字  url: #您的网址  desc: #简短描述  image: #一张图片&#96;&#96;&#96;  小伙伴们                                              D-Sketon                        一个车万人">
 <meta property="og:type" content="website">
 <meta property="og:title" content="友情链接">
 <meta property="og:url" content="https://blog.nhir.top/friend/index.html">
 <meta property="og:site_name" content="nhirのblog">
-<meta property="og:description" content="本站信息  申请方法  添加本站后，在本页留言，格式如下  123456&#96;&#96;&#96;yml- name: #您的名字  url: #您的网址  desc: #简短描述  image: #一张图片&#96;&#96;&#96;  小伙伴们                                                                D-Sketon">
+<meta property="og:description" content="本站信息  申请方法  添加本站后，在本页留言，格式如下  123456&#96;&#96;&#96;yml- name: #您的名字  url: #您的网址  desc: #简短描述  image: #一张图片&#96;&#96;&#96;  小伙伴们                                              D-Sketon                        一个车万人">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog.nhir.top/images/banner.webp">
-<meta property="article:published_time" content="2025-10-05T16:09:24.777Z">
-<meta property="article:modified_time" content="2025-10-05T16:09:24.777Z">
+<meta property="article:published_time" content="2025-10-06T01:09:36.158Z">
+<meta property="article:modified_time" content="2025-10-06T01:09:36.158Z">
 <meta property="article:author" content="nhir">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://blog.nhir.top/images/banner.webp">
@@ -122,19 +122,23 @@
   </div>
   <script>
     var time = null;
+    var loaderEl = document.getElementById('loader');
     var startLoading = () => {
       time = Date.now();
-      document.getElementById('loader').classList.remove("loading");
+      loaderEl.classList.remove("loading");
     }
+    var hideLoader = () => {
+      document.body.style.overflow = 'auto';
+      loader.classList.add('loading');
+    };
+
     var endLoading = () => {
       if (!time) {
-        document.body.style.overflow = 'auto';
-        document.getElementById('loader').classList.add("loading");
+        hideLoader();
       } else {
         if (Date.now() - time > 500) {
           time = null;
-          document.body.style.overflow = 'auto';
-          document.getElementById('loader').classList.add("loading");
+          hideLoader();
         } else {
           setTimeout(endLoading, 500 - (Date.now() - time));
           time = null;
@@ -142,18 +146,17 @@
       }
     }
     window.addEventListener('DOMContentLoaded', endLoading);
-    document.getElementById('loader').addEventListener('click', endLoading);
+    loaderEl.addEventListener('click', endLoading);
   </script>
 
-<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
-</div>
+<div id="copy-tooltip"></div>
 <div id="heatmap-tooltip"></div>
 
 
     <div id="container">
       <div id="wrap">
         <div id="header-nav">
-  <nav id="main-nav">
+  <nav id="main-nav" aria-label="Primary navigation">
     
       
         <span class="main-nav-link-wrap">
@@ -193,18 +196,17 @@
         </span>
       
     
-    <a id="main-nav-toggle" class="nav-icon"></a>
+    <a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
   </nav>
-  <nav id="sub-nav">
+  <nav id="sub-nav" aria-label="Secondary navigation">
     
-      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅" target="_blank"></a>
-    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅" aria-label="RSS 订阅" target="_blank"></a>
     
     
   </nav>
   
 </div>
-<header id="header">
+<header id="header" aria-label="Site header">
   
     
       <picture>
@@ -235,8 +237,8 @@
   </div>
 </header>
 
-        <div id="content" class="sidebar-left"  >
-          <aside id="sidebar">
+        <div id="content" aria-label="Page content" class="sidebar-left"  >
+          <aside id="sidebar" aria-label="Sidebar">
   
   <div class="sidebar-wrapper-container ">
   
@@ -269,11 +271,11 @@
 <div class="sidebar-social">
   
     <div class="icon-email sidebar-social-icon">
-      <a href=mailto:nhirsama@outlook.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+      <a href=mailto:nhirsama@outlook.com itemprop="url" target="_blank" aria-label="email" rel="noopener nofollow noreferrer"></a>
     </div>
   
     <div class="icon-github sidebar-social-icon">
-      <a href=https://github.com/nhirsama itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+      <a href=https://github.com/nhirsama itemprop="url" target="_blank" aria-label="github" rel="noopener nofollow noreferrer"></a>
     </div>
   
 </div>
@@ -336,13 +338,13 @@
   
 </aside>
 
-          <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+          <section id="main" aria-label="Main content"><article id="page-" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner" data-aos="fade-up">
     <div class="article-meta">
       <div class="article-date">
   <span class="article-date-link icon-calendar" data-aos="zoom-in">
-    <time datetime="2025-10-05T16:09:24.777Z" itemprop="datePublished">2025-10-05</time>
-    <time style="display: none;" id="post-update-time">2025-10-05</time>
+    <time datetime="2025-10-06T01:09:36.158Z" itemprop="datePublished">2025-10-06</time>
+    <time style="display: none;" id="post-update-time">2025-10-06</time>
   </span>
   
 </div>
@@ -365,11 +367,9 @@
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">```yml</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="comment">#您的名字</span></span><br><span class="line">  <span class="attr">url:</span> <span class="comment">#您的网址</span></span><br><span class="line">  <span class="attr">desc:</span> <span class="comment">#简短描述</span></span><br><span class="line">  <span class="attr">image:</span> <span class="comment">#一张图片</span></span><br><span class="line"><span class="string">```</span></span><br></pre></td></tr></table></figure>
 <h2 id="小伙伴们"><a class="markdownIt-Anchor" href="#小伙伴们"></a> 小伙伴们</h2>
 <div class="friend-wrap" data-aos="zoom-in"><div class="friend-item-wrap">
-    <a href="https://d-sketon.github.io/" rel="noopener external nofollow noreferrer" target="_blank"></a>
+    <a href="https://d-sketon.github.io/" rel="noopener nofollow noreferrer" target="_blank"></a>
     <div class="friend-icon-wrap">
-      <div class="friend-icon">
-          <img data-src="https://d-sketon.github.io/avatar/avatar.webp" data-sizes="auto" alt="D-Sketon" class="lazyload">
-      </div>
+      <img class="no-lightbox" src="https://d-sketon.github.io/avatar/avatar.webp" alt="D-Sketon">
     </div>
     <div class="friend-info-wrap">
       <div class="friend-name">
@@ -389,7 +389,7 @@
     <p><strong><span class="icon-user icon"></span>本文作者：</strong>nhir @ nhirのblog</p>
     <p><strong><span class="icon-link icon"></span>本文链接：</strong><a href="https://blog.nhir.top/friend/index.html">https://blog.nhir.top/friend/index.html</a></p>
     
-    <p><strong><span class="icon-calendar icon"></span>本文发布时间：</strong>2025-10-05 16:09:24</p>
+    <p><strong><span class="icon-calendar icon"></span>本文发布时间：</strong>2025-10-06 01:09:36</p>
     
     
     
@@ -421,7 +421,7 @@
 
 </section>
         </div>
-        <footer id="footer">
+        <footer id="footer" aria-label="Site footer">
   <div style="width: 100%; overflow: hidden">
     <div class="footer-line"></div>
   </div>
@@ -462,7 +462,7 @@
         
         <div id="mask" class="hide"></div>
       </div>
-      <nav id="mobile-nav">
+      <nav id="mobile-nav" aria-label="Mobile navigation">
   <div class="sidebar-wrap">
     
       <div class="sidebar-author">
@@ -487,11 +487,11 @@
 <div class="sidebar-social">
   
     <div class="icon-email sidebar-social-icon">
-      <a href=mailto:nhirsama@outlook.com itemprop="url" target="_blank" aria-label="email" rel="noopener external nofollow noreferrer"></a>
+      <a href=mailto:nhirsama@outlook.com itemprop="url" target="_blank" aria-label="email" rel="noopener nofollow noreferrer"></a>
     </div>
   
     <div class="icon-github sidebar-social-icon">
-      <a href=https://github.com/nhirsama itemprop="url" target="_blank" aria-label="github" rel="noopener external nofollow noreferrer"></a>
+      <a href=https://github.com/nhirsama itemprop="url" target="_blank" aria-label="github" rel="noopener nofollow noreferrer"></a>
     </div>
   
 </div>
@@ -621,9 +621,9 @@
           url: "https://blog.nhir.top/friend/index.html",
           excerpt: "",
           description: "",
-          stripContent: " 本站信息  申请方法  添加本站后，在本页留言，格式如下  123456```yml- name: #您的名字  url: #您的网址  desc: #简短描述  image: #一张图片```  小伙伴们                                                                D-Sketon                        一个车万人                ",
-          date: "Sun Oct 05 2025 16:09:24 GMT+0000",
-          updated: "Sun Oct 05 2025 16:09:24 GMT+0000",
+          stripContent: " 本站信息  申请方法  添加本站后，在本页留言，格式如下  123456```yml- name: #您的名字  url: #您的网址  desc: #简短描述  image: #一张图片```  小伙伴们                                              D-Sketon                        一个车万人                ",
+          date: "Mon Oct 06 2025 01:09:36 GMT+0000",
+          updated: "Mon Oct 06 2025 01:09:36 GMT+0000",
           cover: "/images/banner.webp",
         };
       </script>
@@ -640,22 +640,18 @@
     
       <script type="module" data-pjax>
         const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
-        
+        const initPswp = (gallery, children) => {
+          if (_$$(`${gallery} ${children}`).length > 0) {
+            new PhotoSwipeLightbox({
+              gallery,
+              children,
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+        }
         const pswp = () => {
-          if (_$$('.article-entry a.article-gallery-item').length > 0) {
-            new PhotoSwipeLightbox({
-              gallery: '.article-entry',
-              children: 'a.article-gallery-item',
-              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
-            }).init();
-          }
-          if(_$$('.article-gallery a.article-gallery-item').length > 0) {
-            new PhotoSwipeLightbox({
-              gallery: '.article-gallery',
-              children: 'a.article-gallery-item',
-              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
-            }).init();
-          }
+          initPswp('.article-entry', 'a.article-gallery-item');
+          initPswp('.article-gallery', 'a.article-gallery-item');
           window.lightboxStatus = 'done';
           window.removeEventListener('lightbox:ready', pswp);
         }
@@ -690,7 +686,7 @@
   \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
                                                   
 `,'color: #ff5252;')
-    console.log('%c Theme.Reimu v' + '1.9.2' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.10.0' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
   </script>
   
 
