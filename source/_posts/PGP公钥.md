@@ -1,5 +1,5 @@
 ---
-title: GPG公钥
+title: PGP公钥
 tags: []
 categories: []
 sticky: false
@@ -12,9 +12,10 @@ sponsor:
 ---
 
 
-# GPG 公钥
+# PGP 公钥
 ## Q&A
 ### 这是什么？
+PGP（Pretty Good Privacy）是一套用于讯息加密、验证的应用程序。  
 [GPG](https://gnupg.org/)（GNU Privacy Guard）是一套开源的加密与签名工具。它可以让你在互联网上安全地传输信息，避免中间人篡改或窃听。
 
 ### 这有什么用？
@@ -49,7 +50,7 @@ sponsor:
 > gpg --verify file.sig file.txt
 > ```
 > 5. 使用在线加密
-> 访问 [GPG Tool](https://pgpcn.github.io/pgp/simple.html)，选择加密，将[附录](https://blog.nhir.top/2025/10/05/GPG%E5%85%AC%E9%92%A5/#%E9%99%84%E5%BD%95)中的公钥复制至左侧“收信人的公开密钥”栏，在右侧“要发送的信息”栏填写要加密的信息，之后加密信息并将下方“加密后的 PGP 信息”栏**全部**复制并发送至我的[邮箱](mailto:nhirsama@outlook.com)。
+> 访问 [PGP Tool](https://pgpcn.github.io/pgp/simple.html)，选择加密，将[附录](https://blog.nhir.top/2025/10/05/GPG%E5%85%AC%E9%92%A5/#%E9%99%84%E5%BD%95)中的公钥复制至左侧“收信人的公开密钥”栏，在右侧“要发送的信息”栏填写要加密的信息，之后加密信息并将下方“加密后的 PGP 信息”栏**全部**复制并发送至我的[邮箱](mailto:nhirsama@outlook.com)。
 > 注:哪怕网页完全在本地浏览器运行，也仍不建议使用使用此网站加密隐私数据。
 ### 我为何要这么做
 在隐私泄漏愈发频繁的当下，我们必须使用零信任原则来保护我们的隐私安全。
@@ -70,8 +71,14 @@ BdoA/1Po5iRnwG/v/j4CKufqBgICGLd86KvU6VAwcfnctF8MuDgEaOCwHRIKKwYB
 BAGXVQEFAQEHQB6dvoOe8vBOAX1BbgYVuL7GP6psysur9Kntc8PQJiZwAwEIB4h4
 BBgWCgAgFiEESphOMjDKzhc1FsczQaagloo4zswFAmjgsB0CGwwACgkQQaagloo4
 zszhZgEAuW3ILDdsmV93jtvHZRzbnEDF+1qkiOFYtbRx8eqUtWcBAOP0du8/Tf8y
-jskNsjmCN4+79AaVFHf72BWVh8fbpBkO
-=//ZT
+jskNsjmCN4+79AaVFHf72BWVh8fbpBkOuDMEaOkK0xYJKwYBBAHaRw8BAQdAV8CW
+ohMexpuje76Y6iKwKPHyn68aeDhHwM9D4u7B31qI9QQYFgoAJhYhBEqYTjIwys4X
+NRbHM0GmoJaKOM7MBQJo6QrTAhsCBQkJZgGAAIEJEEGmoJaKOM7MdiAEGRYKAB0W
+IQQRwGo4vvZxEEkeupu98uJkGyYLKAUCaOkK0wAKCRC98uJkGyYLKN/yAQCJwyK/
+SBszZa2Mcup2Vt01j9XXjYO0X0p73XCk1mVknwD+I/UORAaQLCNu+T6ZeEMwgF2V
+kxUgmjGgPQ/IskKgTgj3rgD/X1oWhmOJ0AXr0hQi0Ny6aJOVnVutdrT7Gnu2mr6T
+WosBAMBLTT33plKjGOOy6GQZWey2Rek+kg3OQvoGvUTHEfMP
+=19V8
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
@@ -81,6 +88,7 @@ pub   ed25519 2025-10-04 [SC]
       4A98 4E32 30CA CE17 3516  C733 41A6 A096 8A38 CECC
 uid             [ 绝对 ] ling <nhirsama@outlook.com>
 sub   cv25519 2025-10-04 [E]
+sub   ed25519 2025-10-10 [S] [有效至：2030-10-09]
 ```
 
 ### 公钥服务器
