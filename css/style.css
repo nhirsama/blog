@@ -2447,6 +2447,105 @@ pre .javascript .function {
   font-size: 12px;
   margin-right: 4px;
 }
+:root {
+  --color-info-bg: #ecf5fe;
+  --color-info-text: #06c;
+  --color-info-shadow: #f5faff;
+  --color-warning-bg: #fff5e0;
+  --color-warning-text: #ad6405;
+  --color-warning-shadow: #fffcf5;
+  --color-danger-bg: #fff0f0;
+  --color-danger-text: #c5202b;
+  --color-danger-shadow: #fff5f5;
+  --color-tip-bg: #edfdf2;
+  --color-tip-text: #048b4c;
+  --color-tip-shadow: #f5fff8;
+  --color-important-bg: #f5edfd;
+  --color-important-text: #7317cf;
+  --color-important-shadow: #faf6fe;
+}
+[data-theme="dark"]:root {
+  --color-info-bg: #2d4053;
+  --color-info-text: #75b2f0;
+  --color-info-shadow: #1d2935;
+  --color-warning-bg: #53462d;
+  --color-warning-text: #f0c775;
+  --color-warning-shadow: #352d1d;
+  --color-danger-bg: #532d2d;
+  --color-danger-text: #f07575;
+  --color-danger-shadow: #351d1d;
+  --color-tip-bg: #2d5338;
+  --color-tip-text: #75f09a;
+  --color-tip-shadow: #1d3524;
+  --color-important-bg: #402d53;
+  --color-important-text: #b275f0;
+  --color-important-shadow: #291d35;
+}
+.custom-block {
+  margin: 28px 0;
+  border-radius: 12px;
+  transition: 0.3s;
+  display: flow-root;
+  padding: 0 12px;
+}
+.custom-block .custom-block-title:before {
+  font-weight: normal;
+  margin-right: 8px;
+  font-family: "iconfont";
+}
+.custom-block.info {
+  background: var(--color-info-bg);
+  color: var(--color-info-text);
+  border-left: 6px var(--color-info-text) solid;
+  box-shadow: 0 0 5px 2px var(--color-info-shadow);
+}
+.custom-block.info .custom-block-title:before {
+  content: "\e647";
+}
+.custom-block.warning {
+  background: var(--color-warning-bg);
+  color: var(--color-warning-text);
+  box-shadow: 0 0 5px 2px var(--color-warning-shadow);
+  border-left: 6px var(--color-warning-text) solid;
+}
+.custom-block.warning .custom-block-title:before {
+  content: "\e646";
+}
+.custom-block.danger {
+  background: var(--color-danger-bg);
+  color: var(--color-danger-text);
+  box-shadow: 0 0 5px 2px var(--color-danger-shadow);
+  border-left: 6px var(--color-danger-text) solid;
+}
+.custom-block.danger .custom-block-title:before {
+  content: "\e645";
+}
+.custom-block.tip {
+  background: var(--color-tip-bg);
+  color: var(--color-tip-text);
+  box-shadow: 0 0 5px 2px var(--color-tip-shadow);
+  border-left: 6px var(--color-tip-text) solid;
+}
+.custom-block.tip .custom-block-title:before {
+  content: "\e643";
+}
+.custom-block.important {
+  background: var(--color-important-bg);
+  color: var(--color-important-text);
+  box-shadow: 0 0 5px 2px var(--color-important-shadow);
+  border-left: 6px var(--color-important-text) solid;
+}
+.custom-block.important .custom-block-title:before {
+  content: "\e649";
+}
+.custom-block p {
+  margin: 12px 0;
+}
+.custom-block-title {
+  margin: 12px 0 !important;
+  font-size: 18px;
+  font-weight: bold;
+}
 .sidebar-top {
   position: fixed;
   bottom: 30px;
