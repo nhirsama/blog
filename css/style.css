@@ -545,6 +545,7 @@ body {
   text-size-adjust: 100%;
   font-family: 'Mulish','Noto Serif SC', '-apple-system','PingFang SC','Microsoft YaHei','sans-serif';
   transition: background 1s;
+  text-autospace: normal;
   color: var(--color-default);
 }
 body ::selection {
