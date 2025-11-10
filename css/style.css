@@ -1015,32 +1015,23 @@ button {
   line-height: 1.2em;
   margin: 1.2em 0 0.75em;
 }
-.article-entry h1:before,
-.article-entry h2:before,
-.article-entry h3:before,
-.article-entry h4:before,
-.article-entry h5:before,
-.article-entry h6:before {
-  font-family: 'iconfont';
-  font-weight: normal;
-}
-.article-entry h1 a,
-.article-entry h2 a,
-.article-entry h3 a,
-.article-entry h4 a,
-.article-entry h5 a,
-.article-entry h6 a {
+.article-entry h1 a:first-of-type,
+.article-entry h2 a:first-of-type,
+.article-entry h3 a:first-of-type,
+.article-entry h4 a:first-of-type,
+.article-entry h5 a:first-of-type,
+.article-entry h6 a:first-of-type {
   font-family: 'iconfont';
   opacity: 0.5;
   margin-right: 4px;
   transition: 0.3s;
 }
-.article-entry h1 a:hover,
-.article-entry h2 a:hover,
-.article-entry h3 a:hover,
-.article-entry h4 a:hover,
-.article-entry h5 a:hover,
-.article-entry h6 a:hover {
+.article-entry h1 a:first-of-type:hover,
+.article-entry h2 a:first-of-type:hover,
+.article-entry h3 a:first-of-type:hover,
+.article-entry h4 a:first-of-type:hover,
+.article-entry h5 a:first-of-type:hover,
+.article-entry h6 a:first-of-type:hover {
   opacity: 0.8;
   text-decoration: none !important;
 }
